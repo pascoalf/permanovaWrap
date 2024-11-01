@@ -1,11 +1,10 @@
 full_permanova_summary <- function(y,env,model,a,b,alpha = 0.05,...){
   require(vegan)
   require(dplyr)
-  # y is community table (species as columns!)
-  # model is the model in formula nomenclature, see: help(formula)
+  # y is community table (species as columns)
+  # model is the model in formula nomenclature
   # a is the first variable used in the model (must be a column name of env)
   # b is the second variable used in the model (must be a column name of env)
-  # alpha is the significance level for p-value
   
   # Make model
   model <- as.formula(model)
